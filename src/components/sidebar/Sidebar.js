@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 // import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
 import * as BsIcons from "react-icons/bs";
-import logo from "../img/logo.svg";
-import profile from "../img/profile.svg";
+import logo from "../../img/logo.svg";
+import profile from "../../img/profile.svg";
 
 import { SidebarData } from "./SidebarData";
 
 function Sidebar() {
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -20,7 +20,7 @@ function Sidebar() {
           <FaIcons.FaBars onClick={showSidebar} className="text-white" />
         </Link>
       </div>
-      <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+      <nav className={sidebar ? "nav-menu " : "nav-menu active"}>
         <ul className="nav-menu-items">
           <div className="nav-title">
             <img src={logo} alt="logo" className=" w-24 ml-6" />
@@ -44,15 +44,15 @@ function Sidebar() {
               </h5>
             </div>
           </div>
-          <hr className=" border border-gray-500" />
+          <hr className=" border border-gray-500 mb-2" />
 
           {SidebarData.map((item, index) => {
             return (
               <li key={index} className={item.cName}>
-                <Link to={item.path}>
+                <NavLink to={item.path} activeClassName={item.isActive}>
                   {item.icon}
                   <span className="ml-4">{item.title}</span>
-                </Link>
+                </NavLink>
               </li>
             );
           })}

@@ -21,6 +21,11 @@ module.exports = {
           DEFAULT: "#1492E6",
         },
       },
+      spacing: {
+        497: "480px",
+        296: "294px",
+        90: "22rem",
+      },
     },
   },
   variants: {
