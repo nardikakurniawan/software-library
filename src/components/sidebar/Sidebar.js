@@ -15,12 +15,15 @@ function Sidebar() {
 
   return (
     <>
-      <div className="navbar ">
+      <div className="navbar" data-aos="fade-down">
         <Link to="#" className="menu-bars">
           <FaIcons.FaBars onClick={showSidebar} className="text-white" />
         </Link>
       </div>
-      <nav className={sidebar ? "nav-menu " : "nav-menu active"}>
+      <nav
+        className={sidebar ? "nav-menu " : "nav-menu active"}
+        data-aos="fade-right"
+      >
         <ul className="nav-menu-items">
           <div className="nav-title">
             <img src={logo} alt="logo" className=" w-24 ml-6" />
