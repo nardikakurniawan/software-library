@@ -14,17 +14,15 @@ function App() {
   return (
     <>
       <Router>
-        <div className="flex ">
-          <Sidebar />
+        <Sidebar />
 
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/source-code" element={<SourceCode />} />
-            <Route path="/source-code/add-data" element={<SourceCodeAdd />} />
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/source-code" element={<SourceCode />} />
+          <Route path="/source-code/add-data" element={<SourceCodeAdd />} />
 
-            <Route path="/user-management" element={<UserManagement />} />
-          </Routes>
-        </div>
+          <Route path="/user-management" element={<UserManagement />} />
+        </Routes>
       </Router>
     </>
   );

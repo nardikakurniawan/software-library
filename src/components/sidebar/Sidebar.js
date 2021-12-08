@@ -20,17 +20,14 @@ function Sidebar() {
           <FaIcons.FaBars onClick={showSidebar} className="text-white" />
         </Link>
       </div>
-      <nav
-        className={sidebar ? "nav-menu " : "nav-menu active"}
-        data-aos="fade-right"
-      >
+      <nav className={sidebar ? "nav-menu " : "nav-menu active"}>
         <ul className="nav-menu-items">
           <div className="nav-title">
             <img src={logo} alt="logo" className=" w-24 ml-6" />
             <h1 className="text-3xl text-center text-slWhite font-bold ">
               Software Library
             </h1>
-            <span to="#" className="menu-bars-close">
+            <span to="#" className="menu-bars-close lg:hidden">
               <BsIcons.BsArrowLeftSquareFill
                 onClick={showSidebar}
                 className="text-slWhite opacity-50 hover:opacity-80 cursor-pointer"
@@ -51,7 +48,7 @@ function Sidebar() {
 
           {SidebarData.map((item, index) => {
             return (
-              <li key={index} className={item.cName}>
+              <li key={index} className={item.cName} onClick={showSidebar}>
                 <NavLink to={item.path} activeClassName={item.isActive}>
                   {item.icon}
                   <span className="ml-4">{item.title}</span>

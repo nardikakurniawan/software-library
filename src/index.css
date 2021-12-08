@@ -3,11 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 /* NAVBAR & SIDEBAR */
@@ -32,10 +34,10 @@
 }
 
 .nav-menu {
-  @apply bg-slPurple w-80 h-screen flex justify-center fixed top-0 -left-full transition delay-700 duration-700 ease-in-out z-20;
+  @apply bg-slPurple w-80 h-screen flex justify-center fixed top-0 -left-full lg:left-0 transition duration-700  z-20;
 }
 .nav-menu.active {
-  @apply left-0 transition delay-500 duration-500 ease-in-out;
+  @apply left-0 transition duration-700;
 }
 
 .nav-text {
@@ -62,3 +64,7 @@
   @apply bg-gray-800 w-full h-20 flex justify-start items-center;
 }
 /* END NAVBAR & SIDEBAR */
+
+.upload-zip {
+  z-index: -1;
+}
