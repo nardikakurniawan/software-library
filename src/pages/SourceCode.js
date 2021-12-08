@@ -27,7 +27,7 @@ export default function SourceCode() {
             <h1 className=" text-3xl font-bold">Source Code</h1>
             <Link
               to="/source-code/add-data"
-              className=" md:ml-6 lg:ml-10 bg-slGreen py-2 px-4 rounded-md text-slWhite hover:opacity-60"
+              className=" md:ml-6 lg:ml-10 bg-slGreen py-2 px-4 rounded-md text-slWhite hover:bg-slGreen-dark transition-all duration-500 hover:shadow-md"
             >
               <FaIcons.FaPlus />
             </Link>
@@ -49,13 +49,13 @@ export default function SourceCode() {
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 ">
-          <Link to="#" className="item-link" data-aos="fade-up">
-            <div className=" ">
-              <h4 className="uppercase md:text-md lg:text-lg text-center mb-2">
+          <div className="item-link" data-aos="fade-up">
+            <div className=" shadow-xl rounded-xl px-2">
+              <h4 className="uppercase text-lg text-slPurple font-bold text-center mb-2">
                 Python-mini-projects
               </h4>
 
-              <div className=" w-full overflow-hidden rounded relative ">
+              <div className="w-full overflow-hidden rounded relative ">
                 <img
                   src={imgProject1}
                   alt=""
@@ -99,20 +99,39 @@ export default function SourceCode() {
                   </form>
                 </div>
               </div>
+
+              <div className=" flex justify-center items-center ">
+                <div className="flex justify-around w-full my-4">
+                  <Link
+                    to="/source-code/add-video"
+                    className="bg-slCyan py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slCyan-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
+                  >
+                    Add Video
+                  </Link>
+                  <Link
+                    to="/source-code/add-video"
+                    className=" bg-slPurple py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slPurple-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block mx-2 lg:mx-0"
+                  >
+                    Add e-Book
+                  </Link>
+                  <Link
+                    to="/source-code/add-video"
+                    className="bg-slWhite py-2 px-4 text-slPurple rounded-md shadow-sm hover:shadow-lg hover:bg-slWhite-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
+                  >
+                    Add Document
+                  </Link>
+                </div>
+              </div>
             </div>
-          </Link>
-          <Link
-            to="#"
-            className="item-link"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div className=" ">
-              <h4 className="uppercase md:text-md lg:text-lg text-center mb-2">
+          </div>
+
+          <div className="item-link" data-aos="fade-up">
+            <div className=" shadow-xl rounded-xl px-2">
+              <h4 className="uppercase text-lg text-slPurple font-bold text-center mb-2">
                 Python-mini-projects
               </h4>
 
-              <div className=" w-full overflow-hidden rounded relative ">
+              <div className="w-full overflow-hidden rounded relative ">
                 <img
                   src={imgProject1}
                   alt=""
@@ -127,7 +146,7 @@ export default function SourceCode() {
                       <button
                         type="button"
                         onClick={(e) => setShowModalCodeLg(true)}
-                        className=" text-2xl text-center text-gray-400 hover:text-slGreen"
+                        className=" text-2xl text-center text-gray-400 hover:text-slWhite"
                       >
                         <abbr title="Detail">
                           <FaIcons.FaEye />
@@ -156,20 +175,39 @@ export default function SourceCode() {
                   </form>
                 </div>
               </div>
+
+              <div className=" flex justify-center items-center ">
+                <div className="flex justify-around w-full my-4">
+                  <Link
+                    to="/source-code/add-video"
+                    className="bg-slCyan py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slCyan-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
+                  >
+                    Add Video
+                  </Link>
+                  <Link
+                    to="/source-code/add-video"
+                    className=" bg-slPurple py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slPurple-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block mx-2 lg:mx-0"
+                  >
+                    Add e-Book
+                  </Link>
+                  <Link
+                    to="/source-code/add-video"
+                    className="bg-slWhite py-2 px-4 text-slPurple rounded-md shadow-sm hover:shadow-lg hover:bg-slWhite-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
+                  >
+                    Add Document
+                  </Link>
+                </div>
+              </div>
             </div>
-          </Link>
-          <Link
-            to="#"
-            className="item-link"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div className=" ">
-              <h4 className="uppercase md:text-md lg:text-lg text-center mb-2">
+          </div>
+
+          <div className="item-link" data-aos="fade-up">
+            <div className=" shadow-xl rounded-xl px-2">
+              <h4 className="uppercase text-lg text-slPurple font-bold text-center mb-2">
                 Python-mini-projects
               </h4>
 
-              <div className=" w-full overflow-hidden rounded relative ">
+              <div className="w-full overflow-hidden rounded relative ">
                 <img
                   src={imgProject1}
                   alt=""
@@ -184,7 +222,7 @@ export default function SourceCode() {
                       <button
                         type="button"
                         onClick={(e) => setShowModalCodeLg(true)}
-                        className=" text-2xl text-center text-gray-400 hover:text-slGreen"
+                        className=" text-2xl text-center text-gray-400 hover:text-slWhite"
                       >
                         <abbr title="Detail">
                           <FaIcons.FaEye />
@@ -213,20 +251,39 @@ export default function SourceCode() {
                   </form>
                 </div>
               </div>
+
+              <div className=" flex justify-center items-center ">
+                <div className="flex justify-around w-full my-4">
+                  <Link
+                    to="/source-code/add-video"
+                    className="bg-slCyan py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slCyan-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
+                  >
+                    Add Video
+                  </Link>
+                  <Link
+                    to="/source-code/add-video"
+                    className=" bg-slPurple py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slPurple-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block mx-2 lg:mx-0"
+                  >
+                    Add e-Book
+                  </Link>
+                  <Link
+                    to="/source-code/add-video"
+                    className="bg-slWhite py-2 px-4 text-slPurple rounded-md shadow-sm hover:shadow-lg hover:bg-slWhite-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
+                  >
+                    Add Document
+                  </Link>
+                </div>
+              </div>
             </div>
-          </Link>
-          <Link
-            to="#"
-            className="item-link"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div className=" ">
-              <h4 className="uppercase md:text-md lg:text-lg text-center mb-2">
+          </div>
+
+          <div className="item-link" data-aos="fade-up">
+            <div className=" shadow-xl rounded-xl px-2">
+              <h4 className="uppercase text-lg text-slPurple font-bold text-center mb-2">
                 Python-mini-projects
               </h4>
 
-              <div className=" w-full overflow-hidden rounded relative ">
+              <div className="w-full overflow-hidden rounded relative ">
                 <img
                   src={imgProject1}
                   alt=""
@@ -241,7 +298,7 @@ export default function SourceCode() {
                       <button
                         type="button"
                         onClick={(e) => setShowModalCodeLg(true)}
-                        className=" text-2xl text-center text-gray-400 hover:text-slGreen"
+                        className=" text-2xl text-center text-gray-400 hover:text-slWhite"
                       >
                         <abbr title="Detail">
                           <FaIcons.FaEye />
@@ -270,8 +327,107 @@ export default function SourceCode() {
                   </form>
                 </div>
               </div>
+
+              <div className=" flex justify-center items-center ">
+                <div className="flex justify-around w-full my-4">
+                  <Link
+                    to="/source-code/add-video"
+                    className="bg-slCyan py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slCyan-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
+                  >
+                    Add Video
+                  </Link>
+                  <Link
+                    to="/source-code/add-video"
+                    className=" bg-slPurple py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slPurple-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block mx-2 lg:mx-0"
+                  >
+                    Add e-Book
+                  </Link>
+                  <Link
+                    to="/source-code/add-video"
+                    className="bg-slWhite py-2 px-4 text-slPurple rounded-md shadow-sm hover:shadow-lg hover:bg-slWhite-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
+                  >
+                    Add Document
+                  </Link>
+                </div>
+              </div>
             </div>
-          </Link>
+          </div>
+
+          <div className="item-link" data-aos="fade-up">
+            <div className=" shadow-xl rounded-xl px-2">
+              <h4 className="uppercase text-lg text-slPurple font-bold text-center mb-2">
+                Python-mini-projects
+              </h4>
+
+              <div className="w-full overflow-hidden rounded relative ">
+                <img
+                  src={imgProject1}
+                  alt=""
+                  className="object-cover object-center w-full h-full block"
+                />
+                <div className="btn absolute top-0 w-full h-full flex justify-center items-center bg-gray-800 opacity-0 hover:opacity-80 transition-opacity duration-1000 ">
+                  <form
+                    action=""
+                    className=" block justify-center items-center"
+                  >
+                    <div className="flex justify-center">
+                      <button
+                        type="button"
+                        onClick={(e) => setShowModalCodeLg(true)}
+                        className=" text-2xl text-center text-gray-400 hover:text-slWhite"
+                      >
+                        <abbr title="Detail">
+                          <FaIcons.FaEye />
+                        </abbr>
+                      </button>
+                    </div>
+                    <div className="mt-4 flex  w-full">
+                      <Link
+                        to="/source-code/edit-data"
+                        className="text-gray-400  hover:text-slBlue text-2xl px-6"
+                      >
+                        <abbr title="Edit">
+                          <FaIcons.FaEdit />
+                        </abbr>
+                      </Link>
+                      <button
+                        type="button"
+                        onClick={(e) => setShowModalCode(true)}
+                        className="text-gray-400  hover:text-slRed text-2xl px-6"
+                      >
+                        <abbr title="Delete">
+                          <FaIcons.FaTrashAlt />
+                        </abbr>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div className=" flex justify-center items-center ">
+                <div className="flex justify-around w-full my-4">
+                  <Link
+                    to="/source-code/add-video"
+                    className="bg-slCyan py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slCyan-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
+                  >
+                    Add Video
+                  </Link>
+                  <Link
+                    to="/source-code/add-video"
+                    className=" bg-slPurple py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slPurple-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block mx-2 lg:mx-0"
+                  >
+                    Add e-Book
+                  </Link>
+                  <Link
+                    to="/source-code/add-video"
+                    className="bg-slWhite py-2 px-4 text-slPurple rounded-md shadow-sm hover:shadow-lg hover:bg-slWhite-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
+                  >
+                    Add Document
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <Modal size="sm" active={showModal} toggler={() => setShowModal(false)}>

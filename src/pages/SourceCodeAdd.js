@@ -21,20 +21,23 @@ export default function SourceCodeAdd() {
   };
 
   return (
-    <div className="mt-28 lg:ml-90 ml-4 mr-4 mb-6">
+    <div className=" mt-28 lg:ml-90 ml-4 mr-4 mb-20">
       <div className="container mx-auto">
         <div className="flex items-center" data-aos="fade-right">
-          <Link to="/source-code">
+          <Link
+            to="/source-code"
+            className=" text-slPurple hover:text-slPurple-dark transition-all duration-500"
+          >
             <FaIcons.FaArrowLeft className="text-2xl mr-6" />
           </Link>
           <h1 className="text-3xl font-bold">Source Code</h1>
         </div>
 
-        <div className=" md:mt-10 ">
-          <form action="" className="">
+        <div className=" md:mt-6 ">
+          <form action="">
             <div class="md:grid md:grid-cols-2 gap-8 p-6 rounded-lg shadow-lg bg-white">
               <div className="form-input">
-                <label class="block ">
+                <label class="block " data-aos="fade-up">
                   <span class="text-black font-semibold text-xl">
                     Project Name
                   </span>
@@ -48,7 +51,11 @@ export default function SourceCodeAdd() {
                   </span>
                 </label>
 
-                <div className="flex justify-between items-end">
+                <div
+                  className="flex justify-between items-end"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
                   <label class=" w-11/12 mt-4">
                     <span class="text-black font-semibold text-xl">
                       Category Code
@@ -61,14 +68,18 @@ export default function SourceCodeAdd() {
                   </label>
                   <button
                     type="button"
-                    className="bg-slPurple flex items-center justify-center h-12 w-14 rounded-md text-slWhite hover:bg-slPurple-dark hover:shadow-lg ml-1"
+                    className="bg-slPurple flex items-center justify-center h-12 w-14 rounded-md text-slWhite hover:bg-slPurple-dark hover:shadow-lg ml-1 transition-all duration-500"
                     onClick={(e) => setShowModalCodeMd(true)}
                   >
                     <FaIcons.FaPlus className="text-center" />
                   </button>
                 </div>
 
-                <label class="block mt-4">
+                <label
+                  class="block mt-4"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
                   <span class="text-black font-semibold text-xl">
                     Link Source Code
                   </span>
@@ -79,7 +90,11 @@ export default function SourceCodeAdd() {
                   />
                 </label>
 
-                <label class="block mt-4">
+                <label
+                  class="block mt-4"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
                   <span class="text-black font-semibold text-xl">
                     Release Date
                   </span>
@@ -89,7 +104,11 @@ export default function SourceCodeAdd() {
                   />
                 </label>
 
-                <label class="block mt-4">
+                <label
+                  class="block mt-4"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
                   <span class="text-black font-semibold text-xl">
                     Product Version
                   </span>
@@ -103,7 +122,11 @@ export default function SourceCodeAdd() {
                   </span>
                 </label>
 
-                <label class="block mt-4">
+                <label
+                  class="block mt-4"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                >
                   <span class="text-black font-semibold text-xl">
                     Descriptions
                   </span>
@@ -117,7 +140,11 @@ export default function SourceCodeAdd() {
 
               <div className="upload-image flex justify-center items-center mt-10 md:mt-0 ">
                 <div className="file-image w-full h-full ">
-                  <div className="border border-gray-300  w-full md:h-2/5 lg:h-3/5 rounded-xl overflow-hidden p-2 flex justify-center items-center shadow-md relative">
+                  <div
+                    className="border border-gray-300  w-full md:h-2/5 lg:h-3/5 rounded-xl overflow-hidden p-2 flex justify-center items-center shadow-md relative"
+                    data-aos="zoom-in"
+                    data-aos-delay="700"
+                  >
                     <div className=" border-2 border-gray-300 border-dashed w-3/4 md:h-3/4 bg-slWhite rounded-xl p-2 flex justify-center items-center">
                       <div className="grid grid-rows-3 grid-flow-col gap-2 ">
                         <span className="flex items-center font-semibold">
@@ -128,7 +155,7 @@ export default function SourceCodeAdd() {
                           <span className="mx-2">OR</span>{" "}
                           <hr className=" w-2/4 border border-gray-400" />
                         </div>
-                        <label className="bg-slBlue py-2 px-4 rounded-md text-center text-white hover:bg-blue-800 cursor-pointer ">
+                        <label className="bg-slBlue py-2 px-4 rounded-md text-center text-white hover:bg-slBlue-dark transition-all duration-500 cursor-pointer ">
                           Browse File
                           <input
                             accept="image/*"
@@ -148,7 +175,11 @@ export default function SourceCodeAdd() {
                     </div>
                   </div>
 
-                  <div className="mt-10">
+                  <div
+                    className="mt-10"
+                    data-aos="fade-up"
+                    data-aos-delay="800"
+                  >
                     <h5 className="text-black font-semibold text-xl">
                       Zip File
                     </h5>
@@ -172,13 +203,13 @@ export default function SourceCodeAdd() {
             <div className="my-6 flex justify-center">
               <button
                 type="button"
-                className=" bg-gray-400 py-2 px-4 rounded-md text-slWhite w-32 mr-4 hover:opacity-60 hover:shadow-xl"
+                className=" bg-gray-400 py-2 px-4 rounded-md text-slWhite w-32 mr-4 hover:bg-gray-600 hover:shadow-xl transition-all duration-500"
               >
                 Clear
               </button>
               <button
                 type="button"
-                className=" bg-slBlue py-2 px-4 rounded-md text-slWhite w-32 hover:opacity-60 hover:shadow-xl"
+                className=" bg-slBlue py-2 px-4 rounded-md text-slWhite w-32 hover:bg-slBlue-dark hover:shadow-xl transition-all duration-500"
               >
                 Save
               </button>
