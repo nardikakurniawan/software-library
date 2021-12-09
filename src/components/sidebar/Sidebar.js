@@ -22,10 +22,10 @@ function Sidebar() {
       </div>
       <nav className={sidebar ? "nav-menu " : "nav-menu active"}>
         <ul className="nav-menu-items">
-          <div className="nav-title">
-            <img src={logo} alt="logo" className=" w-24 ml-6" />
-            <h1 className="text-3xl text-center text-slWhite font-bold ">
-              Software Library
+          <div className="nav-title my-1">
+            <img src={logo} alt="logo" className=" w-16 mr-6" />
+            <h1 className="text-2xl text-center text-slWhite font-bold ">
+              Software <br /> Library
             </h1>
             <span to="#" className="menu-bars-close lg:hidden">
               <BsIcons.BsArrowLeftSquareFill
@@ -34,17 +34,17 @@ function Sidebar() {
               />
             </span>
           </div>
-          <hr className=" border border-gray-500" />
-          <div className="nav-title ">
-            <img src={profile} alt="logo" className="w-14 mr-4" />
+          <div className=" bg-slGray w-full h-802" />
+          <div className="nav-title my-4 ">
+            <img src={profile} alt="logo" className="w-12 mr-4" />
             <div className=" text-center">
-              <h1 className="text-3xl text-slWhite font-bold ">Maulana</h1>
-              <h5 className="text-2xl text-gray-400 font-medium ">
+              <h1 className="text-xl text-slWhite font-bold ">Maulana</h1>
+              <h5 className=" text-lg text-gray-400 font-medium ">
                 Super Admin
               </h5>
             </div>
           </div>
-          <hr className=" border border-gray-500 mb-2" />
+          <div className="bg-slGray w-full h-802 mb-2" />
 
           {SidebarData.map((item, index) => {
             return (

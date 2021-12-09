@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import * as FaIcons from "react-icons/fa";
@@ -9,6 +9,8 @@ import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalHeader from "@material-tailwind/react/ModalHeader";
 import ModalFooter from "@material-tailwind/react/ModalFooter";
 import Button from "@material-tailwind/react/Button";
+import Tooltips from "@material-tailwind/react/Tooltips";
+import TooltipsContent from "@material-tailwind/react/TooltipsContent";
 
 import imgProject1 from "../img/project-overview1.jpg";
 
@@ -19,18 +21,27 @@ export default function SourceCode() {
   const setShowModalCode = () => setShowModal(!showModal);
   const setShowModalCodeLg = () => setShowModalLg(!showModalLg);
 
+  const buttonRefDetail = useRef();
+  const buttonRefDelete = useRef();
+  const buttonRefEdit = useRef();
+  const buttonRefAdd = useRef();
+
   return (
-    <div className=" mt-28 lg:ml-90 ml-4 mr-4 mb-6 ">
+    <div className="mt-28 lg:ml-90 ml-4 mr-4 mb-6">
       <div className="container mx-auto">
-        <div data-aos="zoom-in" className="md:flex md:justify-between">
+        <div data-aos="fade-right" className="md:flex md:justify-between">
           <div className="flex items-center justify-between">
-            <h1 className=" text-3xl font-bold">Source Code</h1>
+            <h1 className="text-3xl font-bold">Source Code</h1>
             <Link
+              ref={buttonRefAdd}
               to="/source-code/add-data"
               className=" md:ml-6 lg:ml-10 bg-slGreen py-2 px-4 rounded-md text-slWhite hover:bg-slGreen-dark transition-all duration-500 hover:shadow-md"
             >
               <FaIcons.FaPlus />
             </Link>
+            <Tooltips placement="right" ref={buttonRefAdd}>
+              <TooltipsContent>Add Source Code</TooltipsContent>
+            </Tooltips>
           </div>
           <div className="flex justify-between items-center md:w-5/12 sm:w-4/12 ">
             <span class="text-gray-400  md:text-sm lg:text-base ">
@@ -69,32 +80,40 @@ export default function SourceCode() {
                     <div className="flex justify-center">
                       <button
                         type="button"
+                        ref={buttonRefDetail}
                         onClick={(e) => setShowModalCodeLg(true)}
                         className=" text-2xl text-center text-gray-400 hover:text-slWhite"
                       >
-                        <abbr title="Detail">
-                          <FaIcons.FaEye />
-                        </abbr>
+                        <FaIcons.FaEye />
                       </button>
+
+                      <Tooltips placement="top" ref={buttonRefDetail}>
+                        <TooltipsContent>Detail Source Code</TooltipsContent>
+                      </Tooltips>
                     </div>
                     <div className="mt-4 flex  w-full">
                       <Link
+                        ref={buttonRefEdit}
                         to="/source-code/edit-data"
                         className="text-gray-400  hover:text-slBlue text-2xl px-6"
                       >
-                        <abbr title="Edit">
-                          <FaIcons.FaEdit />
-                        </abbr>
+                        <FaIcons.FaEdit />
                       </Link>
+                      <Tooltips placement="left" ref={buttonRefEdit}>
+                        <TooltipsContent>Edit Source Code</TooltipsContent>
+                      </Tooltips>
+
                       <button
                         type="button"
+                        ref={buttonRefDelete}
                         onClick={(e) => setShowModalCode(true)}
                         className="text-gray-400  hover:text-slRed text-2xl px-6"
                       >
-                        <abbr title="Delete">
-                          <FaIcons.FaTrashAlt />
-                        </abbr>
+                        <FaIcons.FaTrashAlt />
                       </button>
+                      <Tooltips placement="right" ref={buttonRefDelete}>
+                        <TooltipsContent>Delete Source Code</TooltipsContent>
+                      </Tooltips>
                     </div>
                   </form>
                 </div>
@@ -125,7 +144,7 @@ export default function SourceCode() {
             </div>
           </div>
 
-          <div className="item-link" data-aos="fade-up">
+          <div className="item-link" data-aos="fade-up" data-aos-delay="100">
             <div className=" shadow-xl rounded-xl px-2">
               <h4 className="uppercase text-lg text-slPurple font-bold text-center mb-2">
                 Python-mini-projects
@@ -145,32 +164,40 @@ export default function SourceCode() {
                     <div className="flex justify-center">
                       <button
                         type="button"
+                        ref={buttonRefDetail}
                         onClick={(e) => setShowModalCodeLg(true)}
                         className=" text-2xl text-center text-gray-400 hover:text-slWhite"
                       >
-                        <abbr title="Detail">
-                          <FaIcons.FaEye />
-                        </abbr>
+                        <FaIcons.FaEye />
                       </button>
+
+                      <Tooltips placement="top" ref={buttonRefDetail}>
+                        <TooltipsContent>Detail Source Code</TooltipsContent>
+                      </Tooltips>
                     </div>
                     <div className="mt-4 flex  w-full">
                       <Link
+                        ref={buttonRefEdit}
                         to="/source-code/edit-data"
                         className="text-gray-400  hover:text-slBlue text-2xl px-6"
                       >
-                        <abbr title="Edit">
-                          <FaIcons.FaEdit />
-                        </abbr>
+                        <FaIcons.FaEdit />
                       </Link>
+                      <Tooltips placement="left" ref={buttonRefEdit}>
+                        <TooltipsContent>Edit Source Code</TooltipsContent>
+                      </Tooltips>
+
                       <button
                         type="button"
+                        ref={buttonRefDelete}
                         onClick={(e) => setShowModalCode(true)}
                         className="text-gray-400  hover:text-slRed text-2xl px-6"
                       >
-                        <abbr title="Delete">
-                          <FaIcons.FaTrashAlt />
-                        </abbr>
+                        <FaIcons.FaTrashAlt />
                       </button>
+                      <Tooltips placement="right" ref={buttonRefDelete}>
+                        <TooltipsContent>Delete Source Code</TooltipsContent>
+                      </Tooltips>
                     </div>
                   </form>
                 </div>
@@ -201,7 +228,7 @@ export default function SourceCode() {
             </div>
           </div>
 
-          <div className="item-link" data-aos="fade-up">
+          <div className="item-link" data-aos="fade-up" data-aos-delay="200">
             <div className=" shadow-xl rounded-xl px-2">
               <h4 className="uppercase text-lg text-slPurple font-bold text-center mb-2">
                 Python-mini-projects
@@ -221,32 +248,40 @@ export default function SourceCode() {
                     <div className="flex justify-center">
                       <button
                         type="button"
+                        ref={buttonRefDetail}
                         onClick={(e) => setShowModalCodeLg(true)}
                         className=" text-2xl text-center text-gray-400 hover:text-slWhite"
                       >
-                        <abbr title="Detail">
-                          <FaIcons.FaEye />
-                        </abbr>
+                        <FaIcons.FaEye />
                       </button>
+
+                      <Tooltips placement="top" ref={buttonRefDetail}>
+                        <TooltipsContent>Detail Source Code</TooltipsContent>
+                      </Tooltips>
                     </div>
                     <div className="mt-4 flex  w-full">
                       <Link
+                        ref={buttonRefEdit}
                         to="/source-code/edit-data"
                         className="text-gray-400  hover:text-slBlue text-2xl px-6"
                       >
-                        <abbr title="Edit">
-                          <FaIcons.FaEdit />
-                        </abbr>
+                        <FaIcons.FaEdit />
                       </Link>
+                      <Tooltips placement="left" ref={buttonRefEdit}>
+                        <TooltipsContent>Edit Source Code</TooltipsContent>
+                      </Tooltips>
+
                       <button
                         type="button"
+                        ref={buttonRefDelete}
                         onClick={(e) => setShowModalCode(true)}
                         className="text-gray-400  hover:text-slRed text-2xl px-6"
                       >
-                        <abbr title="Delete">
-                          <FaIcons.FaTrashAlt />
-                        </abbr>
+                        <FaIcons.FaTrashAlt />
                       </button>
+                      <Tooltips placement="right" ref={buttonRefDelete}>
+                        <TooltipsContent>Delete Source Code</TooltipsContent>
+                      </Tooltips>
                     </div>
                   </form>
                 </div>
@@ -277,7 +312,7 @@ export default function SourceCode() {
             </div>
           </div>
 
-          <div className="item-link" data-aos="fade-up">
+          <div className="item-link" data-aos="fade-up" data-aos-delay="300">
             <div className=" shadow-xl rounded-xl px-2">
               <h4 className="uppercase text-lg text-slPurple font-bold text-center mb-2">
                 Python-mini-projects
@@ -297,32 +332,40 @@ export default function SourceCode() {
                     <div className="flex justify-center">
                       <button
                         type="button"
+                        ref={buttonRefDetail}
                         onClick={(e) => setShowModalCodeLg(true)}
                         className=" text-2xl text-center text-gray-400 hover:text-slWhite"
                       >
-                        <abbr title="Detail">
-                          <FaIcons.FaEye />
-                        </abbr>
+                        <FaIcons.FaEye />
                       </button>
+
+                      <Tooltips placement="top" ref={buttonRefDetail}>
+                        <TooltipsContent>Detail Source Code</TooltipsContent>
+                      </Tooltips>
                     </div>
                     <div className="mt-4 flex  w-full">
                       <Link
+                        ref={buttonRefEdit}
                         to="/source-code/edit-data"
                         className="text-gray-400  hover:text-slBlue text-2xl px-6"
                       >
-                        <abbr title="Edit">
-                          <FaIcons.FaEdit />
-                        </abbr>
+                        <FaIcons.FaEdit />
                       </Link>
+                      <Tooltips placement="left" ref={buttonRefEdit}>
+                        <TooltipsContent>Edit Source Code</TooltipsContent>
+                      </Tooltips>
+
                       <button
                         type="button"
+                        ref={buttonRefDelete}
                         onClick={(e) => setShowModalCode(true)}
                         className="text-gray-400  hover:text-slRed text-2xl px-6"
                       >
-                        <abbr title="Delete">
-                          <FaIcons.FaTrashAlt />
-                        </abbr>
+                        <FaIcons.FaTrashAlt />
                       </button>
+                      <Tooltips placement="right" ref={buttonRefDelete}>
+                        <TooltipsContent>Delete Source Code</TooltipsContent>
+                      </Tooltips>
                     </div>
                   </form>
                 </div>
@@ -353,7 +396,7 @@ export default function SourceCode() {
             </div>
           </div>
 
-          <div className="item-link" data-aos="fade-up">
+          <div className="item-link" data-aos="fade-up" data-aos-delay="400">
             <div className=" shadow-xl rounded-xl px-2">
               <h4 className="uppercase text-lg text-slPurple font-bold text-center mb-2">
                 Python-mini-projects
@@ -373,32 +416,40 @@ export default function SourceCode() {
                     <div className="flex justify-center">
                       <button
                         type="button"
+                        ref={buttonRefDetail}
                         onClick={(e) => setShowModalCodeLg(true)}
                         className=" text-2xl text-center text-gray-400 hover:text-slWhite"
                       >
-                        <abbr title="Detail">
-                          <FaIcons.FaEye />
-                        </abbr>
+                        <FaIcons.FaEye />
                       </button>
+
+                      <Tooltips placement="top" ref={buttonRefDetail}>
+                        <TooltipsContent>Detail Source Code</TooltipsContent>
+                      </Tooltips>
                     </div>
                     <div className="mt-4 flex  w-full">
                       <Link
+                        ref={buttonRefEdit}
                         to="/source-code/edit-data"
                         className="text-gray-400  hover:text-slBlue text-2xl px-6"
                       >
-                        <abbr title="Edit">
-                          <FaIcons.FaEdit />
-                        </abbr>
+                        <FaIcons.FaEdit />
                       </Link>
+                      <Tooltips placement="left" ref={buttonRefEdit}>
+                        <TooltipsContent>Edit Source Code</TooltipsContent>
+                      </Tooltips>
+
                       <button
                         type="button"
+                        ref={buttonRefDelete}
                         onClick={(e) => setShowModalCode(true)}
                         className="text-gray-400  hover:text-slRed text-2xl px-6"
                       >
-                        <abbr title="Delete">
-                          <FaIcons.FaTrashAlt />
-                        </abbr>
+                        <FaIcons.FaTrashAlt />
                       </button>
+                      <Tooltips placement="right" ref={buttonRefDelete}>
+                        <TooltipsContent>Delete Source Code</TooltipsContent>
+                      </Tooltips>
                     </div>
                   </form>
                 </div>

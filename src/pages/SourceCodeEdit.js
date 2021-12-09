@@ -8,7 +8,7 @@ import ModalBody from "@material-tailwind/react/ModalBody";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 
-export default function SourceCodeAdd() {
+export default function SourceCodeEdit() {
   const [showModalMd, setShowModalMd] = useState(false);
   const [selectedImage, setSelectedImage] = useState();
 
@@ -21,7 +21,7 @@ export default function SourceCodeAdd() {
   };
 
   return (
-    <div className="mt-28 lg:ml-90 ml-4 mr-4 mb-6">
+    <div className=" mt-28 lg:ml-90 ml-4 mr-4 mb-20">
       <div className="container mx-auto">
         <div className="flex items-center" data-aos="fade-right">
           <Link
@@ -30,7 +30,7 @@ export default function SourceCodeAdd() {
           >
             <FaIcons.FaArrowLeft className="text-2xl mr-6" />
           </Link>
-          <h1 className="text-3xl font-bold">Source Code Add Data</h1>
+          <h1 className="text-3xl font-bold">Source Code Edit Data</h1>
         </div>
 
         <div className=" md:mt-6 ">
@@ -43,6 +43,7 @@ export default function SourceCodeAdd() {
                   </span>
                   <input
                     type="text"
+                    value="Python Todo List"
                     placeholder="Enter project name"
                     class="px-3 py-3 text-gray-600 bg-white rounded border border-gray-300 outline-none focus:outline-none focus:border-slPurple  w-full"
                   />

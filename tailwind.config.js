@@ -27,11 +27,15 @@ module.exports = {
           DEFAULT: "#0DCAF0",
           dark: "#0B839B",
         },
+        slGray: {
+          DEFAULT: "#707070",
+        },
       },
       spacing: {
         497: "480px",
         296: "294px",
         90: "22rem",
+        802: "2px",
       },
     },
   },

@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import SourceCode from "./pages/SourceCode";
 import UserManagement from "./pages/UserManagement";
 import SourceCodeAdd from "./pages/SourceCodeAdd";
+import SourceCodeEdit from "./pages/SourceCodeEdit";
 // import * as FaIcons from "react-icons/fa";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/source-code" element={<SourceCode />} />
           <Route path="/source-code/add-data" element={<SourceCodeAdd />} />
+          <Route path="/source-code/edit-data" element={<SourceCodeEdit />} />
 
           <Route path="/user-management" element={<UserManagement />} />
         </Routes>
