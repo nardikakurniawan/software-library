@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
 import * as BsIcons from "react-icons/bs";
+import * as RiIcons from "react-icons/ri";
 import logo from "../../img/logo.svg";
 import profile from "../../img/profile.svg";
 
@@ -56,6 +57,13 @@ function Sidebar() {
               </li>
             );
           })}
+          <div className=" bg-slGray w-full h-802" />
+          <li className="nav-text">
+            <NavLink to="/login">
+              <RiIcons.RiLogoutBoxLine />
+              <span className="ml-4">Logout</span>
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </>

@@ -27,7 +27,7 @@ export default function UserManagement() {
   const buttonRefAdd = useRef();
 
   return (
-    <div className="mt-28 lg:ml-90 ml-4 mr-4 mb-6 px-2 overflow-hidden">
+    <div className="mt-28 lg:ml-90 ml-4 mr-4 mb-6 px-2 ">
       <div className="container mx-auto">
         <div data-aos="fade-right" className="md:flex md:justify-between">
           <div className="flex items-center justify-between py-2">
@@ -47,9 +47,9 @@ export default function UserManagement() {
             <input
               type="text"
               placeholder="Search"
-              className="block text-gray-400 border border-gray-300 py-2 px-2 focus:shadow outline-none focus:border-slPurple focus:outline-purple rounded-md w-full"
+              className="block text-slPurple border border-gray-300 py-2 px-2 focus:shadow outline-none focus:border-slPurple focus:outline-purple rounded-md w-full"
             />
-            <span className=" absolute top-3 right-3 text-gray-400">
+            <span className=" absolute top-4 right-4 text-gray-400">
               <FaIcons.FaSearch />
             </span>
           </div>
@@ -66,7 +66,7 @@ export default function UserManagement() {
                   sm:rounded-lg
                 "
               >
-                <table class="min-w-full ">
+                <table class="min-w-full" data-aos="fade-up">
                   <thead class=" bg-slPurple h-16 font-bold">
                     <tr>
                       <th
@@ -143,7 +143,7 @@ export default function UserManagement() {
                         <div className="flex w-full">
                           <Link
                             ref={buttonRefEdit}
-                            to="/source-code/edit-data"
+                            to="/user-management/edit-data"
                             className="text-black  hover:text-slBlue text-2xl mr-4"
                           >
                             <FaIcons.FaEdit />
@@ -348,7 +348,10 @@ export default function UserManagement() {
               </div>
             </div>
           </div>
-          <div class="flex items-center justify-center mt-4">
+          <div
+            class="flex items-center justify-center mt-4 px-8"
+            data-aos="fade-up"
+          >
             <button
               class="text-slPurple bg-transparent hover:bg-slPurple hover:text-white active:bg-purple-600 font-bold text-md px-4 py-2 rounded outline-none focus:outline-none mb-1 ease-linear transition-all duration-150"
               type="button"

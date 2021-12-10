@@ -1,7 +1,7 @@
 import React from "react";
 import * as FaIcons from "react-icons/fa";
 import * as RiIcons from "react-icons/ri";
-import * as IoIcons from "react-icons/io";
+// import * as IoIcons from "react-icons/io";
 import * as SiIcons from "react-icons/si";
 import * as MdIcons from "react-icons/md";
 
@@ -46,34 +46,34 @@ export const SidebarData = [
     cName: "nav-text ",
     isAcvtive: "active",
   },
-  {
-    title: "Video Tutorial",
-    path: "/video-tutorial",
-    icon: <MdIcons.MdOndemandVideo />,
-    cName: "nav-text ",
-    isAcvtive: "active",
-  },
-  {
-    title: "Ebook Tutorial",
-    path: "/ebook-tutorial",
-    icon: <MdIcons.MdLibraryBooks />,
-    cName: "nav-text ",
-    isAcvtive: "active",
-  },
-  {
-    title: "Demo",
-    path: "/demo",
-    icon: <IoIcons.IoMdLink />,
-    cName: "nav-text ",
-    isAcvtive: "active",
-  },
-  {
-    title: "Dokumen Pendukung",
-    path: "/dokumen-pendukung",
-    icon: <SiIcons.SiReadthedocs />,
-    cName: "nav-text ",
-    isAcvtive: "active",
-  },
+  // {
+  //   title: "Video Tutorial",
+  //   path: "/video-tutorial",
+  //   icon: <MdIcons.MdOndemandVideo />,
+  //   cName: "nav-text ",
+  //   isAcvtive: "active",
+  // },
+  // {
+  //   title: "Ebook Tutorial",
+  //   path: "/ebook-tutorial",
+  //   icon: <MdIcons.MdLibraryBooks />,
+  //   cName: "nav-text ",
+  //   isAcvtive: "active",
+  // },
+  // {
+  //   title: "Demo",
+  //   path: "/demo",
+  //   icon: <IoIcons.IoMdLink />,
+  //   cName: "nav-text ",
+  //   isAcvtive: "active",
+  // },
+  // {
+  //   title: "Dokumen Pendukung",
+  //   path: "/dokumen-pendukung",
+  //   icon: <SiIcons.SiReadthedocs />,
+  //   cName: "nav-text ",
+  //   isAcvtive: "active",
+  // },
   {
     title: "Account",
     path: "/account",
