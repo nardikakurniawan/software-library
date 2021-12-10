@@ -3,6 +3,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      outline: {
+        red: "1px solid #FF1900",
+        purple: "1px solid #5C5470",
+      },
       colors: {
         slPurple: {
           DEFAULT: "#5C5470",

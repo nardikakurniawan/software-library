@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import Modal from "@material-tailwind/react/Modal";
 import ModalHeader from "@material-tailwind/react/ModalHeader";
 import ModalBody from "@material-tailwind/react/ModalBody";
+import Tooltips from "@material-tailwind/react/Tooltips";
+import TooltipsContent from "@material-tailwind/react/TooltipsContent";
 
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
@@ -11,6 +13,8 @@ import * as AiIcons from "react-icons/ai";
 export default function SourceCodeAdd() {
   const [showModalMd, setShowModalMd] = useState(false);
   const [selectedImage, setSelectedImage] = useState();
+
+  const buttonRefCategory = useRef();
 
   const setShowModalCodeMd = () => setShowModalMd(!showModalMd);
 
@@ -44,7 +48,7 @@ export default function SourceCodeAdd() {
                   <input
                     type="text"
                     placeholder="Enter project name"
-                    class="px-3 py-3 text-gray-600 bg-white rounded border border-gray-300 outline-none focus:outline-none focus:border-slPurple  w-full"
+                    class="px-3 py-3 text-gray-600 bg-white rounded border border-gray-300 outline-none focus:outline-purple focus:border-slPurple  w-full"
                   />
                   <span class="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
                     Invalid project name field !
@@ -60,7 +64,7 @@ export default function SourceCodeAdd() {
                     <span class="text-black font-semibold text-xl">
                       Category Code
                     </span>
-                    <select class="form-select block w-full mt-1 px-3 py-3 text-gray-600 bg-white rounded border border-gray-300 outline-none focus:outline-none focus:border-slPurple">
+                    <select class="form-select block w-full mt-1 px-3 py-3 text-gray-600 bg-white rounded border border-gray-300 outline-none focus:outline-purple focus:border-slPurple">
                       <option>Website</option>
                       <option>Android</option>
                       <option>Ios</option>
@@ -68,11 +72,15 @@ export default function SourceCodeAdd() {
                   </label>
                   <button
                     type="button"
+                    ref={buttonRefCategory}
                     className="bg-slPurple flex items-center justify-center h-12 w-14 rounded-md text-slWhite hover:bg-slPurple-dark hover:shadow-lg ml-1 transition-all duration-500"
                     onClick={(e) => setShowModalCodeMd(true)}
                   >
                     <FaIcons.FaPlus className="text-center" />
                   </button>
+                  <Tooltips placement="top" ref={buttonRefCategory}>
+                    <TooltipsContent>Add Category</TooltipsContent>
+                  </Tooltips>
                 </div>
 
                 <label
@@ -86,7 +94,7 @@ export default function SourceCodeAdd() {
                   <input
                     type="text"
                     placeholder="Enter Link Source Code"
-                    class="px-3 py-3 text-gray-600 bg-white rounded border border-gray-300 outline-none focus:outline-none focus:border-slPurple  w-full"
+                    class="px-3 py-3 text-gray-600 bg-white rounded border border-gray-300 outline-none focus:outline-purple focus:border-slPurple  w-full"
                   />
                 </label>
 
@@ -100,7 +108,7 @@ export default function SourceCodeAdd() {
                   </span>
                   <input
                     type="date"
-                    class="px-3 py-3 text-gray-600 bg-white rounded border border-gray-300 outline-none focus:outline-none focus:border-slPurple  w-full"
+                    class="px-3 py-3 text-gray-600 bg-white rounded border border-gray-300 outline-none focus:outline-purple focus:border-slPurple  w-full"
                   />
                 </label>
 
@@ -115,7 +123,7 @@ export default function SourceCodeAdd() {
                   <input
                     type="text"
                     placeholder="Enter Product Version"
-                    class="px-3 py-3 text-gray-600 bg-white rounded border border-gray-300 outline-none focus:outline-none focus:border-slPurple  w-full"
+                    class="px-3 py-3 text-gray-600 bg-white rounded border border-gray-300 outline-none focus:outline-purple focus:border-slPurple  w-full"
                   />
                   <span class="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
                     Invalid Product Version !
@@ -131,7 +139,7 @@ export default function SourceCodeAdd() {
                     Descriptions
                   </span>
                   <textarea
-                    class="form-textarea px-3 py-3 text-gray-600 bg-white rounded border border-gray-300 outline-none focus:outline-none focus:border-slPurple w-full"
+                    class="form-textarea px-3 py-3 text-gray-600 bg-white rounded border border-gray-300 outline-none focus:outline-purple focus:border-slPurple w-full"
                     rows="3"
                     placeholder="Enter some long form content."
                   ></textarea>

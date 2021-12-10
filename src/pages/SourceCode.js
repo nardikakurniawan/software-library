@@ -48,7 +48,7 @@ export default function SourceCode() {
               Select Filter:
             </span>
             <div className="md:w-34 w-3/4 relative">
-              <select class="appearance-none form-select block text-gray-400 border border-gray-200 py-2 px-2 focus:shadow focus:outline-none rounded-md w-full ">
+              <select class="form-select  text-gray-400 border border-gray-200 py-2 px-2 focus:shadow outline-none focus:outline-purple rounded-md w-full ">
                 <option value="">All</option>
                 <option value="java">Java</option>
                 <option value="php">PHP</option>
