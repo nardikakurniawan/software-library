@@ -28,7 +28,7 @@ function Sidebar() {
             <h1 className="text-2xl text-center text-slWhite font-bold ">
               Software <br /> Library
             </h1>
-            <span to="#" className="menu-bars-close lg:hidden">
+            <span to="#" className=" text-3xl absolute top-6 right-1 lg:hidden">
               <BsIcons.BsArrowLeftSquareFill
                 onClick={showSidebar}
                 className="text-slWhite opacity-50 hover:opacity-80 cursor-pointer"
@@ -57,12 +57,12 @@ function Sidebar() {
               </li>
             );
           })}
-          <div className=" bg-slGray w-full h-802" />
+          <div className=" bg-slGray w-full h-802 mt-6" />
           <li className="nav-text">
-            <NavLink to="/login">
+            <Link to="/login">
               <RiIcons.RiLogoutBoxLine />
               <span className="ml-4">Logout</span>
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </nav>

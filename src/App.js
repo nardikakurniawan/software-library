@@ -11,6 +11,9 @@ import SourceCodeAdd from "./pages/SourceCodeAdd";
 import SourceCodeEdit from "./pages/SourceCodeEdit";
 import UserManagementAdd from "./pages/UserManagementAdd";
 import UserManagementEdit from "./pages/UserManagementEdit";
+import Account from "./pages/Account";
+import SourceCodeAddCategory from "./pages/SourceCodeAddCategory";
+import SourceCodeDetail from "./pages/SourceCodeDetail";
 // import * as FaIcons from "react-icons/fa";
 
 function App() {
@@ -23,6 +26,11 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/source-code" element={<SourceCode />} />
           <Route path="/source-code/add-data" element={<SourceCodeAdd />} />
+          <Route path="/source-code/detail" element={<SourceCodeDetail />} />
+          <Route
+            path="/source-code/add-category"
+            element={<SourceCodeAddCategory />}
+          />
           <Route path="/source-code/edit-data" element={<SourceCodeEdit />} />
 
           <Route path="/user-management" element={<UserManagement />} />
@@ -34,6 +42,8 @@ function App() {
             path="/user-management/edit-data"
             element={<UserManagementEdit />}
           />
+
+          <Route path="/Account" element={<Account />} />
         </Routes>
       </Router>
     </>

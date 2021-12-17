@@ -22,8 +22,6 @@ export default function SourceCode() {
   const setShowModalCodeLg = () => setShowModalLg(!showModalLg);
 
   const buttonRefDetail = useRef();
-  const buttonRefDelete = useRef();
-  const buttonRefEdit = useRef();
   const buttonRefAdd = useRef();
 
   return (
@@ -50,9 +48,9 @@ export default function SourceCode() {
             <div className="md:w-34 w-3/4 relative">
               <select class="form-select  text-gray-400 border border-gray-200 py-2 px-2 focus:shadow outline-none focus:outline-purple rounded-md w-full ">
                 <option value="">All</option>
-                <option value="java">Java</option>
-                <option value="php">PHP</option>
-                <option value="java script">Java Script</option>
+                <option value="website">Website</option>
+                <option value="mobile">Mobile Apps</option>
+                <option value="desktop">Desktop</option>
               </select>
               {/* <MdIcons.MdInfoOutline className="absolute top-2 right-2 text-gray-400 text-2xl" /> */}
             </div>
@@ -61,7 +59,7 @@ export default function SourceCode() {
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 ">
           <div className="item-link" data-aos="fade-up">
-            <div className=" shadow-xl rounded-xl px-2">
+            <div className=" shadow-xl rounded-xl p-2" data-aos="fade-up">
               <h4 className="uppercase text-lg text-slPurple font-bold text-center mb-2">
                 Python-mini-projects
               </h4>
@@ -78,74 +76,26 @@ export default function SourceCode() {
                     className=" block justify-center items-center"
                   >
                     <div className="flex justify-center">
-                      <button
-                        type="button"
+                      <Link
+                        to="/source-code/detail"
                         ref={buttonRefDetail}
-                        onClick={(e) => setShowModalCodeLg(true)}
-                        className=" text-2xl text-center text-gray-400 hover:text-slWhite"
+                        className=" text-4xl text-center text-gray-400 hover:text-yellow-600 transition-all duration-700"
                       >
                         <FaIcons.FaEye />
-                      </button>
+                      </Link>
 
                       <Tooltips placement="top" ref={buttonRefDetail}>
                         <TooltipsContent>Detail Source Code</TooltipsContent>
                       </Tooltips>
                     </div>
-                    <div className="mt-4 flex  w-full">
-                      <Link
-                        ref={buttonRefEdit}
-                        to="/source-code/edit-data"
-                        className="text-gray-400  hover:text-slBlue text-2xl px-6"
-                      >
-                        <FaIcons.FaEdit />
-                      </Link>
-                      <Tooltips placement="left" ref={buttonRefEdit}>
-                        <TooltipsContent>Edit Source Code</TooltipsContent>
-                      </Tooltips>
-
-                      <button
-                        type="button"
-                        ref={buttonRefDelete}
-                        onClick={(e) => setShowModalCode(true)}
-                        className="text-gray-400  hover:text-slRed text-2xl px-6"
-                      >
-                        <FaIcons.FaTrashAlt />
-                      </button>
-                      <Tooltips placement="right" ref={buttonRefDelete}>
-                        <TooltipsContent>Delete Source Code</TooltipsContent>
-                      </Tooltips>
-                    </div>
                   </form>
-                </div>
-              </div>
-
-              <div className=" flex justify-center items-center ">
-                <div className="flex justify-around w-full my-4">
-                  <Link
-                    to="/source-code/add-video"
-                    className="bg-slCyan py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slCyan-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
-                  >
-                    Add Video
-                  </Link>
-                  <Link
-                    to="/source-code/add-video"
-                    className=" bg-slPurple py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slPurple-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block mx-2 lg:mx-0"
-                  >
-                    Add e-Book
-                  </Link>
-                  <Link
-                    to="/source-code/add-video"
-                    className="bg-slWhite py-2 px-4 text-slPurple rounded-md shadow-sm hover:shadow-lg hover:bg-slWhite-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
-                  >
-                    Add Document
-                  </Link>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="item-link" data-aos="fade-up" data-aos-delay="100">
-            <div className=" shadow-xl rounded-xl px-2">
+            <div className=" shadow-xl rounded-xl p-2" data-aos="fade-up">
               <h4 className="uppercase text-lg text-slPurple font-bold text-center mb-2">
                 Python-mini-projects
               </h4>
@@ -162,74 +112,26 @@ export default function SourceCode() {
                     className=" block justify-center items-center"
                   >
                     <div className="flex justify-center">
-                      <button
-                        type="button"
+                      <Link
+                        to="/source-code/detail"
                         ref={buttonRefDetail}
-                        onClick={(e) => setShowModalCodeLg(true)}
-                        className=" text-2xl text-center text-gray-400 hover:text-slWhite"
+                        className=" text-4xl text-center text-gray-400 hover:text-yellow-600 transition-all duration-700"
                       >
                         <FaIcons.FaEye />
-                      </button>
+                      </Link>
 
                       <Tooltips placement="top" ref={buttonRefDetail}>
                         <TooltipsContent>Detail Source Code</TooltipsContent>
                       </Tooltips>
                     </div>
-                    <div className="mt-4 flex  w-full">
-                      <Link
-                        ref={buttonRefEdit}
-                        to="/source-code/edit-data"
-                        className="text-gray-400  hover:text-slBlue text-2xl px-6"
-                      >
-                        <FaIcons.FaEdit />
-                      </Link>
-                      <Tooltips placement="left" ref={buttonRefEdit}>
-                        <TooltipsContent>Edit Source Code</TooltipsContent>
-                      </Tooltips>
-
-                      <button
-                        type="button"
-                        ref={buttonRefDelete}
-                        onClick={(e) => setShowModalCode(true)}
-                        className="text-gray-400  hover:text-slRed text-2xl px-6"
-                      >
-                        <FaIcons.FaTrashAlt />
-                      </button>
-                      <Tooltips placement="right" ref={buttonRefDelete}>
-                        <TooltipsContent>Delete Source Code</TooltipsContent>
-                      </Tooltips>
-                    </div>
                   </form>
-                </div>
-              </div>
-
-              <div className=" flex justify-center items-center ">
-                <div className="flex justify-around w-full my-4">
-                  <Link
-                    to="/source-code/add-video"
-                    className="bg-slCyan py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slCyan-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
-                  >
-                    Add Video
-                  </Link>
-                  <Link
-                    to="/source-code/add-video"
-                    className=" bg-slPurple py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slPurple-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block mx-2 lg:mx-0"
-                  >
-                    Add e-Book
-                  </Link>
-                  <Link
-                    to="/source-code/add-video"
-                    className="bg-slWhite py-2 px-4 text-slPurple rounded-md shadow-sm hover:shadow-lg hover:bg-slWhite-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
-                  >
-                    Add Document
-                  </Link>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="item-link" data-aos="fade-up" data-aos-delay="200">
-            <div className=" shadow-xl rounded-xl px-2">
+            <div className=" shadow-xl rounded-xl p-2" data-aos="fade-up">
               <h4 className="uppercase text-lg text-slPurple font-bold text-center mb-2">
                 Python-mini-projects
               </h4>
@@ -246,74 +148,26 @@ export default function SourceCode() {
                     className=" block justify-center items-center"
                   >
                     <div className="flex justify-center">
-                      <button
-                        type="button"
+                      <Link
+                        to="/source-code/detail"
                         ref={buttonRefDetail}
-                        onClick={(e) => setShowModalCodeLg(true)}
-                        className=" text-2xl text-center text-gray-400 hover:text-slWhite"
+                        className=" text-4xl text-center text-gray-400 hover:text-yellow-600 transition-all duration-700"
                       >
                         <FaIcons.FaEye />
-                      </button>
+                      </Link>
 
                       <Tooltips placement="top" ref={buttonRefDetail}>
                         <TooltipsContent>Detail Source Code</TooltipsContent>
                       </Tooltips>
                     </div>
-                    <div className="mt-4 flex  w-full">
-                      <Link
-                        ref={buttonRefEdit}
-                        to="/source-code/edit-data"
-                        className="text-gray-400  hover:text-slBlue text-2xl px-6"
-                      >
-                        <FaIcons.FaEdit />
-                      </Link>
-                      <Tooltips placement="left" ref={buttonRefEdit}>
-                        <TooltipsContent>Edit Source Code</TooltipsContent>
-                      </Tooltips>
-
-                      <button
-                        type="button"
-                        ref={buttonRefDelete}
-                        onClick={(e) => setShowModalCode(true)}
-                        className="text-gray-400  hover:text-slRed text-2xl px-6"
-                      >
-                        <FaIcons.FaTrashAlt />
-                      </button>
-                      <Tooltips placement="right" ref={buttonRefDelete}>
-                        <TooltipsContent>Delete Source Code</TooltipsContent>
-                      </Tooltips>
-                    </div>
                   </form>
-                </div>
-              </div>
-
-              <div className=" flex justify-center items-center ">
-                <div className="flex justify-around w-full my-4">
-                  <Link
-                    to="/source-code/add-video"
-                    className="bg-slCyan py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slCyan-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
-                  >
-                    Add Video
-                  </Link>
-                  <Link
-                    to="/source-code/add-video"
-                    className=" bg-slPurple py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slPurple-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block mx-2 lg:mx-0"
-                  >
-                    Add e-Book
-                  </Link>
-                  <Link
-                    to="/source-code/add-video"
-                    className="bg-slWhite py-2 px-4 text-slPurple rounded-md shadow-sm hover:shadow-lg hover:bg-slWhite-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
-                  >
-                    Add Document
-                  </Link>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="item-link" data-aos="fade-up" data-aos-delay="300">
-            <div className=" shadow-xl rounded-xl px-2">
+            <div className=" shadow-xl rounded-xl p-2" data-aos="fade-up">
               <h4 className="uppercase text-lg text-slPurple font-bold text-center mb-2">
                 Python-mini-projects
               </h4>
@@ -330,74 +184,26 @@ export default function SourceCode() {
                     className=" block justify-center items-center"
                   >
                     <div className="flex justify-center">
-                      <button
-                        type="button"
+                      <Link
+                        to="/source-code/detail"
                         ref={buttonRefDetail}
-                        onClick={(e) => setShowModalCodeLg(true)}
-                        className=" text-2xl text-center text-gray-400 hover:text-slWhite"
+                        className=" text-4xl text-center text-gray-400 hover:text-yellow-600 transition-all duration-700"
                       >
                         <FaIcons.FaEye />
-                      </button>
+                      </Link>
 
                       <Tooltips placement="top" ref={buttonRefDetail}>
                         <TooltipsContent>Detail Source Code</TooltipsContent>
                       </Tooltips>
                     </div>
-                    <div className="mt-4 flex  w-full">
-                      <Link
-                        ref={buttonRefEdit}
-                        to="/source-code/edit-data"
-                        className="text-gray-400  hover:text-slBlue text-2xl px-6"
-                      >
-                        <FaIcons.FaEdit />
-                      </Link>
-                      <Tooltips placement="left" ref={buttonRefEdit}>
-                        <TooltipsContent>Edit Source Code</TooltipsContent>
-                      </Tooltips>
-
-                      <button
-                        type="button"
-                        ref={buttonRefDelete}
-                        onClick={(e) => setShowModalCode(true)}
-                        className="text-gray-400  hover:text-slRed text-2xl px-6"
-                      >
-                        <FaIcons.FaTrashAlt />
-                      </button>
-                      <Tooltips placement="right" ref={buttonRefDelete}>
-                        <TooltipsContent>Delete Source Code</TooltipsContent>
-                      </Tooltips>
-                    </div>
                   </form>
-                </div>
-              </div>
-
-              <div className=" flex justify-center items-center ">
-                <div className="flex justify-around w-full my-4">
-                  <Link
-                    to="/source-code/add-video"
-                    className="bg-slCyan py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slCyan-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
-                  >
-                    Add Video
-                  </Link>
-                  <Link
-                    to="/source-code/add-video"
-                    className=" bg-slPurple py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slPurple-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block mx-2 lg:mx-0"
-                  >
-                    Add e-Book
-                  </Link>
-                  <Link
-                    to="/source-code/add-video"
-                    className="bg-slWhite py-2 px-4 text-slPurple rounded-md shadow-sm hover:shadow-lg hover:bg-slWhite-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
-                  >
-                    Add Document
-                  </Link>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="item-link" data-aos="fade-up" data-aos-delay="400">
-            <div className=" shadow-xl rounded-xl px-2">
+            <div className=" shadow-xl rounded-xl p-2" data-aos="fade-up">
               <h4 className="uppercase text-lg text-slPurple font-bold text-center mb-2">
                 Python-mini-projects
               </h4>
@@ -414,67 +220,19 @@ export default function SourceCode() {
                     className=" block justify-center items-center"
                   >
                     <div className="flex justify-center">
-                      <button
-                        type="button"
+                      <Link
+                        to="/source-code/detail"
                         ref={buttonRefDetail}
-                        onClick={(e) => setShowModalCodeLg(true)}
-                        className=" text-2xl text-center text-gray-400 hover:text-slWhite"
+                        className=" text-4xl text-center text-gray-400 hover:text-yellow-600 transition-all duration-700"
                       >
                         <FaIcons.FaEye />
-                      </button>
+                      </Link>
 
                       <Tooltips placement="top" ref={buttonRefDetail}>
                         <TooltipsContent>Detail Source Code</TooltipsContent>
                       </Tooltips>
                     </div>
-                    <div className="mt-4 flex  w-full">
-                      <Link
-                        ref={buttonRefEdit}
-                        to="/source-code/edit-data"
-                        className="text-gray-400  hover:text-slBlue text-2xl px-6"
-                      >
-                        <FaIcons.FaEdit />
-                      </Link>
-                      <Tooltips placement="left" ref={buttonRefEdit}>
-                        <TooltipsContent>Edit Source Code</TooltipsContent>
-                      </Tooltips>
-
-                      <button
-                        type="button"
-                        ref={buttonRefDelete}
-                        onClick={(e) => setShowModalCode(true)}
-                        className="text-gray-400  hover:text-slRed text-2xl px-6"
-                      >
-                        <FaIcons.FaTrashAlt />
-                      </button>
-                      <Tooltips placement="right" ref={buttonRefDelete}>
-                        <TooltipsContent>Delete Source Code</TooltipsContent>
-                      </Tooltips>
-                    </div>
                   </form>
-                </div>
-              </div>
-
-              <div className=" flex justify-center items-center ">
-                <div className="flex justify-around w-full my-4">
-                  <Link
-                    to="/source-code/add-video"
-                    className="bg-slCyan py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slCyan-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
-                  >
-                    Add Video
-                  </Link>
-                  <Link
-                    to="/source-code/add-video"
-                    className=" bg-slPurple py-2 px-4 text-white rounded-md shadow-sm hover:shadow-lg hover:bg-slPurple-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block mx-2 lg:mx-0"
-                  >
-                    Add e-Book
-                  </Link>
-                  <Link
-                    to="/source-code/add-video"
-                    className="bg-slWhite py-2 px-4 text-slPurple rounded-md shadow-sm hover:shadow-lg hover:bg-slWhite-dark transition-all duration-500 uppercase transform hover:-translate-y-1 hover:scale-110 text-sm text-center block"
-                  >
-                    Add Document
-                  </Link>
                 </div>
               </div>
             </div>

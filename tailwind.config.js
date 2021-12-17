@@ -18,6 +18,8 @@ module.exports = {
         },
         slRed: {
           DEFAULT: "#FF1900",
+          dark: "#981A0C",
+          light: "#FF9D92",
         },
         slGreen: {
           DEFAULT: "#55DA50",
@@ -26,6 +28,7 @@ module.exports = {
         slBlue: {
           DEFAULT: "#1492E6",
           dark: "#05588F",
+          light: "#B4E1FF",
         },
         slCyan: {
           DEFAULT: "#0DCAF0",
