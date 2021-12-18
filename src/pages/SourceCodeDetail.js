@@ -459,7 +459,7 @@ export default function SourceCodeDetail() {
                     </h1>
                     <Link
                       ref={buttonRefAdd}
-                      to="/source-code/add-video"
+                      to="/source-code/add-documents"
                       className=" md:ml-6 lg:ml-10 bg-slGreen py-2 px-4 rounded-md text-slWhite hover:bg-slGreen-dark transition-all duration-500 hover:shadow-md"
                     >
                       <FaIcons.FaPlus />
@@ -521,7 +521,7 @@ export default function SourceCodeDetail() {
                               <div className="flex w-full">
                                 <Link
                                   ref={buttonRefEdit}
-                                  to="/source-code/edit-video"
+                                  to="/source-code/edit-documents"
                                   className=" text-slGray  hover:text-slBlue text-2xl mr-4"
                                 >
                                   <FaIcons.FaEdit />
