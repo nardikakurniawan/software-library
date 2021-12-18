@@ -138,9 +138,9 @@ export default function SourceCodeDetail() {
         </div>
 
         <div className="mt-14">
-          <div className="lg:grid lg:grid-cols-2 gap-6">
+          <div className="lg:grid lg:grid-cols-2 gap-4 ">
             <div className="videos" data-aos="zoom-out" data-aos-delay="1100">
-              <div className=" shadow-xl py-2 px-4 rounded-lg ">
+              <div className=" shadow-xl py-2 px-4 rounded-lg">
                 <div className="md:flex md:justify-between">
                   <div className="flex items-center justify-between">
                     <h1 className="text-2xl text-slPurple font-bold mb-2">
@@ -447,7 +447,7 @@ export default function SourceCodeDetail() {
             </div>
 
             <div
-              className="supporting-documents my-10"
+              className="supporting-documents my-10 lg:my-0"
               data-aos="zoom-out"
               data-aos-delay="1100"
             >
