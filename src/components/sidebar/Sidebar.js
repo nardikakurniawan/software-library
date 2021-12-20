@@ -24,20 +24,23 @@ function Sidebar() {
       <nav className={sidebar ? "nav-menu " : "nav-menu active"}>
         <ul className="nav-menu-items">
           <div className="nav-title my-1">
-            <img src={logo} alt="logo" className=" w-16 mr-6" />
+            <img src={logo} alt="logo" className=" w-16 mr-2" />
             <h1 className="text-2xl text-center text-slWhite font-bold ">
               Software <br /> Library
             </h1>
-            <span to="#" className=" text-3xl absolute top-6 right-1 lg:hidden">
+            <span
+              to="#"
+              className=" text-3xl absolute top-6 right-1 lg:hidden transition-all duration-500 ease-in-out"
+            >
               <BsIcons.BsArrowLeftSquareFill
                 onClick={showSidebar}
-                className="text-slWhite opacity-50 hover:opacity-80 cursor-pointer"
+                className="text-slWhite opacity-50 hover:opacity-80 cursor-pointer "
               />
             </span>
           </div>
           <div className=" bg-slGray w-full h-802" />
           <div className="nav-title my-4 ">
-            <img src={profile} alt="logo" className="w-12 mr-4" />
+            <img src={profile} alt="logo" className="w-12 mr-2" />
             <div className=" text-center">
               <h1 className="text-xl text-slWhite font-bold ">Maulana</h1>
               <h5 className=" text-lg text-gray-400 font-medium ">

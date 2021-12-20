@@ -19,7 +19,7 @@ export default function SourceCodeEditDocuments() {
   const buttonBack = useRef();
 
   return (
-    <div className="mt-28 lg:ml-90 ml-4 mr-4 mb-6">
+    <div className="mt-28 lg:ml-76 ml-4 mr-4 mb-6">
       <div className="container mx-auto">
         <div className="flex items-center" data-aos="fade-right">
           <Link

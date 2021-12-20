@@ -34,7 +34,7 @@
 }
 
 .nav-menu {
-  @apply bg-slPurple w-80 h-screen flex justify-center fixed top-0 -left-full lg:left-0 transition-all duration-700  z-20;
+  @apply bg-slPurple w-72 h-screen flex justify-center fixed top-0 -left-full lg:left-0 transition-all duration-700  z-20;
 }
 .nav-menu.active {
   @apply left-0 transition-all duration-700;

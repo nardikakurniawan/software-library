@@ -10,7 +10,7 @@ export default function Account() {
   };
 
   return (
-    <div className="mt-28 lg:ml-90 ml-4 mr-4 mb-6">
+    <div className="mt-28 lg:ml-76 ml-4 mr-4 mb-6">
       <div className="container mx-auto">
         <div className="flex items-center" data-aos="fade-right">
           <h1 className="text-3xl font-bold">My Account</h1>
@@ -18,7 +18,10 @@ export default function Account() {
 
         <div className=" md:mt-6 ">
           <form action="">
-            <div class="md:grid md:grid-cols-2 gap-8 p-6 rounded-lg shadow-lg bg-white">
+            <div
+              class="md:grid md:grid-cols-2 gap-8 p-6 rounded-lg shadow-lg bg-white"
+              data-aos="fade-up"
+            >
               <div className="form-input">
                 <label class="block " data-aos="fade-up">
                   <span class="text-black font-semibold text-xl">Name</span>
@@ -78,28 +81,30 @@ export default function Account() {
               </div>
 
               <div className="upload-image flex justify-center items-center mt-6 md:mt-0 ">
-                <div
-                  className="border border-gray-300  w-full h-40 md:h-1/2 lg:h-5/6 rounded-xl overflow-hidden p-2 flex justify-center items-center shadow-md relative"
-                  data-aos="zoom-in"
-                  data-aos-delay="700"
-                >
-                  <div className=" border-2 border-gray-300 border-dashed w-3/4 md:h-3/4 bg-slWhite rounded-xl p-2 flex justify-center items-center">
-                    <label className="bg-slBlue py-2 px-4 rounded-md text-center text-white hover:bg-slBlue-dark transition-all duration-500 cursor-pointer ">
-                      Browse File
-                      <input
-                        accept="image/*"
-                        type="file"
-                        hidden
-                        onChange={imageChange}
-                      />
-                      {selectedImage && (
-                        <img
-                          src={URL.createObjectURL(selectedImage)}
-                          alt="Thumb"
-                          className="absolute top-0 left-0 w-full h-full object-cover object-center"
+                <div className="w-4/5 lg:w-1/2 h-8/1 lg:h-3/4 flex items-center transition-all duration-700">
+                  <div
+                    className="border border-gray-300  w-full h-40 md:h-1/2 lg:h-5/6 rounded-xl overflow-hidden p-2 flex justify-center items-center shadow-md relative"
+                    data-aos="zoom-in"
+                    data-aos-delay="700"
+                  >
+                    <div className=" border-2 border-gray-300 border-dashed w-3/4 md:h-3/4 bg-slWhite rounded-xl p-2 flex justify-center items-center">
+                      <label className="bg-slBlue py-2 px-4 rounded-md text-center text-white hover:bg-slBlue-dark transition-all duration-500 cursor-pointer ">
+                        Browse File
+                        <input
+                          accept="image/*"
+                          type="file"
+                          hidden
+                          onChange={imageChange}
                         />
-                      )}
-                    </label>
+                        {selectedImage && (
+                          <img
+                            src={URL.createObjectURL(selectedImage)}
+                            alt="Thumb"
+                            className="absolute top-0 left-0 w-full h-full object-cover object-center"
+                          />
+                        )}
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
