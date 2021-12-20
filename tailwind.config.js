@@ -11,6 +11,7 @@ module.exports = {
         slPurple: {
           DEFAULT: "#5C5470",
           dark: "#352F44",
+          light: "#DCD2DD",
         },
         slWhite: {
           DEFAULT: "#F2F1F5",
@@ -36,6 +37,9 @@ module.exports = {
         },
         slGray: {
           DEFAULT: "#707070",
+        },
+        slBrawn: {
+          DEFAULT: "#D2CACC",
         },
       },
       spacing: {
