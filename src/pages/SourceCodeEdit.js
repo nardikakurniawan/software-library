@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import Modal from "@material-tailwind/react/Modal";
 import ModalHeader from "@material-tailwind/react/ModalHeader";
 import ModalBody from "@material-tailwind/react/ModalBody";
+import Tooltips from "@material-tailwind/react/Tooltips";
+import TooltipsContent from "@material-tailwind/react/TooltipsContent";
 
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
@@ -13,6 +15,8 @@ export default function SourceCodeEdit() {
   const [selectedImage, setSelectedImage] = useState();
 
   const setShowModalCodeMd = () => setShowModalMd(!showModalMd);
+
+  const buttonBack = useRef();
 
   const imageChange = (e) => {
     if (e.target.files && e.target.files.length > 0) {
@@ -25,11 +29,15 @@ export default function SourceCodeEdit() {
       <div className="container mx-auto">
         <div className="flex items-center" data-aos="fade-right">
           <Link
-            to="/source-code"
+            to="/source-code/detail"
+            ref={buttonBack}
             className=" text-slPurple hover:text-slPurple-dark transition-all duration-500"
           >
             <FaIcons.FaArrowLeft className="text-2xl mr-6" />
           </Link>
+          <Tooltips placement="left" ref={buttonBack}>
+            <TooltipsContent>Back</TooltipsContent>
+          </Tooltips>
           <h1 className="text-3xl font-bold">Source Code Edit Data</h1>
         </div>
 
@@ -139,23 +147,18 @@ export default function SourceCodeEdit() {
                 </label>
               </div>
 
-              <div className="upload-image flex justify-center items-center mt-10 md:mt-0 ">
-                <div className="file-image w-full h-full ">
+              <div className="upload-image flex justify-center items-center mt-6 md:mt-0 ">
+                <div className="file-image w-8/1 lg:w-3/4 h-full ">
                   <div
-                    className="border border-gray-300  w-full md:h-2/5 lg:h-3/5 rounded-xl overflow-hidden p-2 flex justify-center items-center shadow-md relative"
+                    className="border border-gray-300 h-48 w-full md:h-2/5 lg:h-1/2 rounded-xl overflow-hidden p-2 flex justify-center items-center shadow-md relative"
                     data-aos="zoom-in"
                     data-aos-delay="700"
                   >
                     <div className=" border-2 border-gray-300 border-dashed w-3/4 md:h-3/4 bg-slWhite rounded-xl p-2 flex justify-center items-center">
-                      <div className="grid grid-rows-3 grid-flow-col gap-2 ">
+                      <div className="grid grid-rows-2 grid-flow-col gap-2 ">
                         <span className="flex items-center font-semibold">
-                          Drag your image here
+                          Upload your image here!
                         </span>
-                        <div className="flex justify-center items-center">
-                          <hr className=" w-2/4 border border-gray-400" />{" "}
-                          <span className="mx-2">OR</span>{" "}
-                          <hr className=" w-2/4 border border-gray-400" />
-                        </div>
                         <label className="bg-slBlue py-2 px-4 rounded-md text-center text-white hover:bg-slBlue-dark transition-all duration-500 cursor-pointer ">
                           Browse File
                           <input
@@ -176,13 +179,9 @@ export default function SourceCodeEdit() {
                     </div>
                   </div>
 
-                  <div
-                    className="mt-10"
-                    data-aos="fade-up"
-                    data-aos-delay="800"
-                  >
+                  <div className="mt-6" data-aos="fade-up" data-aos-delay="800">
                     <h5 className="text-black font-semibold text-xl">
-                      Zip File
+                      Upload Source Code (Zip)
                     </h5>
 
                     <div className="border border-gray-300 shadow-md rounded-lg p-4 flex justify-center items-center mt-2 ">
@@ -191,6 +190,24 @@ export default function SourceCodeEdit() {
                         <input
                           type="file"
                           accept=".zip"
+                          contentEditable="Upload Your File here"
+                          className=" "
+                        />
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className="mt-6" data-aos="fade-up" data-aos-delay="900">
+                    <h5 className="text-black font-semibold text-xl">
+                      Upload E-Book (PDF)
+                    </h5>
+
+                    <div className="border border-gray-300 shadow-md rounded-lg p-4 flex justify-center items-center mt-2 ">
+                      <label className="cursor-pointer flex justify-center items-center w-full h-full ">
+                        <AiIcons.AiOutlineFileZip className=" text-5xl"></AiIcons.AiOutlineFileZip>
+                        <input
+                          type="file"
+                          accept=".pdf"
                           contentEditable="Upload Your File here"
                           className=" "
                         />

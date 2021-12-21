@@ -29,7 +29,7 @@ export default function SourceCodeEditDocuments() {
           >
             <FaIcons.FaArrowLeft className="text-2xl mr-6" />
           </Link>
-          <Tooltips placement="top" ref={buttonBack}>
+          <Tooltips placement="left" ref={buttonBack}>
             <TooltipsContent>Back</TooltipsContent>
           </Tooltips>
 

@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import * as FaIcons from "react-icons/fa";
 
+import Tooltips from "@material-tailwind/react/Tooltips";
+import TooltipsContent from "@material-tailwind/react/TooltipsContent";
+
 export default function UserManagementEdit() {
   const [selectedImage, setSelectedImage] = useState();
+
+  const buttonBack = useRef();
 
   const imageChange = (e) => {
     if (e.target.files && e.target.files.length > 0) {
@@ -18,10 +23,14 @@ export default function UserManagementEdit() {
         <div className="flex items-center" data-aos="fade-right">
           <Link
             to="/user-management"
+            ref={buttonBack}
             className=" text-slPurple hover:text-slPurple-dark transition-all duration-500"
           >
             <FaIcons.FaArrowLeft className="text-2xl mr-6" />
           </Link>
+          <Tooltips placement="left" ref={buttonBack}>
+            <TooltipsContent>Back</TooltipsContent>
+          </Tooltips>
           <h1 className="text-3xl font-bold">User Management Edit Data</h1>
         </div>
 
